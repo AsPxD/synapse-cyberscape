@@ -101,6 +101,114 @@
   }
 }
 
+/* Marvel Universe Styles */
+.marvel-grid {
+  background-image: 
+    linear-gradient(rgba(81, 140, 202, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(81, 140, 202, 0.05) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.marvel-text {
+  position: relative;
+  text-shadow: 
+    0 0 5px #ED1D24,
+    0 0 10px #ED1D24;
+}
+
+.marvel-text:before, .marvel-text:after {
+  content: 'MARVEL';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.marvel-text:before {
+  color: #ff00ff;
+  z-index: -1;
+  filter: blur(1px);
+  transform: translate(-2px, 0);
+  animation: glitch 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
+  animation-delay: 0.1s;
+}
+
+.marvel-text:after {
+  color: #00ffff;
+  z-index: -2;
+  filter: blur(1px);
+  transform: translate(2px, 0);
+  animation: glitch 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both infinite;
+  animation-delay: 0.1s;
+}
+
+.energy-pulse {
+  position: relative;
+  overflow: hidden;
+}
+
+.energy-pulse:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 0%;
+  background: linear-gradient(to bottom, transparent, #60CDFF, #518CCA, transparent);
+  box-shadow: 
+    0 0 10px #60CDFF,
+    0 0 20px #60CDFF,
+    0 0 30px #60CDFF,
+    0 0 40px #60CDFF;
+  z-index: 2;
+  animation: energy-beam 2s ease-in-out infinite;
+}
+
+@keyframes energy-beam {
+  0% {
+    height: 0%;
+    opacity: 0.5;
+  }
+  50% {
+    height: 100%;
+    opacity: 1;
+  }
+  100% {
+    height: 0%;
+    opacity: 0.5;
+  }
+}
+
+.infinity-stone {
+  position: relative;
+}
+
+.infinity-stone:after {
+  content: '';
+  position: absolute;
+  inset: -5px;
+  border-radius: 50%;
+  background: inherit;
+  filter: blur(5px);
+  opacity: 0.7;
+  z-index: -1;
+  animation: stone-pulse 2s ease-in-out infinite;
+}
+
+@keyframes stone-pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.9;
+  }
+}
+
+/* Keep existing cyberpunk styles for backward compatibility */
 .cyber-grid {
   background-image: 
     linear-gradient(rgba(51, 195, 240, 0.1) 1px, transparent 1px),
