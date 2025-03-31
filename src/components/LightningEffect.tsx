@@ -1,6 +1,6 @@
 
 import React, { useEffect, useState } from 'react';
-import { Zap, Lightning, Circuit } from 'lucide-react';
+import { Zap } from 'lucide-react';
 
 interface LightningBolt {
   id: number;
