@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -68,15 +69,6 @@ export default {
 					'electric': '#1EAEDB',
 					'purple': '#8B5CF6',
 					'charcoal': '#222222',
-				},
-				marvel: {
-					'red': '#ED1D24',
-					'dark-blue': '#0B223F',
-					'light-blue': '#518CCA',
-					'gold': '#F0E6AA',
-					'silver': '#C0C0C0',
-					'black': '#000000',
-					'energy': '#60CDFF',
 				}
 			},
 			borderRadius: {
@@ -121,76 +113,6 @@ export default {
 					'50%': { 
 						opacity: '0.7',
 						filter: 'brightness(1.3) blur(1px)',
-					}
-				},
-				'shield-pulse': {
-					'0%': { 
-						transform: 'scale(1)',
-						opacity: '0.8',
-						filter: 'brightness(1) blur(1px)',
-					},
-					'50%': { 
-						transform: 'scale(1.05)',
-						opacity: '1',
-						filter: 'brightness(1.2) blur(0px)',
-					},
-					'100%': { 
-						transform: 'scale(1)',
-						opacity: '0.8',
-						filter: 'brightness(1) blur(1px)',
-					}
-				},
-				'infinity-glow': {
-					'0%': { 
-						boxShadow: '0 0 5px #60CDFF, 0 0 10px #60CDFF',
-					},
-					'50%': { 
-						boxShadow: '0 0 15px #60CDFF, 0 0 30px #60CDFF, 0 0 45px #60CDFF',
-					},
-					'100%': { 
-						boxShadow: '0 0 5px #60CDFF, 0 0 10px #60CDFF',
-					}
-				},
-				'hero-entrance': {
-					'0%': { 
-						transform: 'translateY(50px)',
-						opacity: '0',
-					},
-					'70%': { 
-						transform: 'translateY(-10px)',
-						opacity: '0.7',
-					},
-					'100%': { 
-						transform: 'translateY(0)',
-						opacity: '1',
-					}
-				},
-				'avengers-assemble': {
-					'0%': { 
-						opacity: '0',
-						transform: 'scale(0) rotate(-10deg)'
-					},
-					'60%': { 
-						opacity: '0.6',
-						transform: 'scale(1.1) rotate(5deg)'
-					},
-					'80%': { 
-						opacity: '0.8',
-						transform: 'scale(0.95) rotate(-2deg)'
-					},
-					'100%': { 
-						opacity: '1',
-						transform: 'scale(1) rotate(0)'
-					}
-				},
-				'star-twinkle': {
-					'0%, 100%': {
-						opacity: '0.3',
-						transform: 'scale(0.8)'
-					},
-					'50%': {
-						opacity: '1',
-						transform: 'scale(1.2)'
 					}
 				},
 				'electric-bolt': {
@@ -333,12 +255,7 @@ export default {
 				'assemble': 'assemble 1.5s ease-out forwards',
 				'matrix-fall': 'matrix-fall 3s linear infinite',
 				'rotate-3d': 'rotate-3d 8s ease-in-out infinite',
-				'lightning-flash': 'lightning-flash 1s ease-in-out',
-				'shield-pulse': 'shield-pulse 2s ease-in-out infinite',
-				'infinity-glow': 'infinity-glow 3s ease-in-out infinite',
-				'hero-entrance': 'hero-entrance 1s ease-out forwards',
-				'avengers-assemble': 'avengers-assemble 1.2s ease-out forwards',
-				'star-twinkle': 'star-twinkle 3s ease-in-out infinite',
+				'lightning-flash': 'lightning-flash 1s ease-in-out'
 			}
 		}
 	},
