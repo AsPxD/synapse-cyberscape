@@ -15,10 +15,10 @@ const Preloader: React.FC<PreloaderProps> = ({ onComplete }) => {
   const [fadeOut, setFadeOut] = useState(false);
   
   useEffect(() => {
-    // Simulate loading
+    // Simulate loading - faster initial load
     const timer = setTimeout(() => {
       setLoaded(true);
-    }, 500);
+    }, 300);
     
     return () => clearTimeout(timer);
   }, []);
@@ -28,14 +28,14 @@ const Preloader: React.FC<PreloaderProps> = ({ onComplete }) => {
     
     const timer = setTimeout(() => {
       onComplete();
-    }, 1000);
+    }, 800); // Faster transition
     
     return () => clearTimeout(timer);
   };
   
   return (
     <div 
-      className={`fixed inset-0 bg-cyber-dark flex items-center justify-center overflow-hidden transition-opacity duration-1000 ${fadeOut ? 'opacity-0' : 'opacity-100'}`}
+      className={`fixed inset-0 bg-cyber-dark flex items-center justify-center overflow-hidden transition-opacity duration-800 ${fadeOut ? 'opacity-0' : 'opacity-100'}`}
       style={{ zIndex: 9999 }}
     >
       <div className="cyber-grid absolute inset-0" />
